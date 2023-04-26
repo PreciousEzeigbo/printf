@@ -12,12 +12,12 @@ int print_int(va_list arguments, char *buf, unsigned int ibuf)
 	unsigned int int_in, int_temp, i, div, isnneg;
 
 	int_input = va_arg(arguments, int);
-	isneg = 0;
+	isnneg = 0;
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
 		ibuf = hand1_buf(buf, '-', ibuf);
-		isneg = 1;
+		isnneg = 1;
 	}
 	else
 	{
@@ -35,5 +35,5 @@ int print_int(va_list arguments, char *buf, unsigned int ibuf)
 	{
 		ibuf = hand1_buf(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
-	return (i + isneg);
+	return (i + isnneg);
 }
