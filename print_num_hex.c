@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prinnhex - print number in hex begining with zero
+ * prinhex - print number in hex begining with zero
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
