@@ -22,7 +22,7 @@ int printing_hex(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	if (int_input < 0)
 	{
-		int_input =  (int_input * -1) -1;
+		int_input =  (int_input * -1) - 1;
 		isnegative = 1;
 	}
 
