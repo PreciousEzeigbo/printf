@@ -21,17 +21,17 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuf)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			ibuf = handl_buf(buf, '\\', ibuf);
-			ibuf = handl_buf(buf, 'x', ibuf);
+			ibuf = hand1_buf(buf, '\\', ibuf);
+			ibuf = hand1_buf(buf, 'x', ibuf);
 			op = str[i];
 			binary = fill_binary_array(binary, op, 0, 32);
 			hexadecimal = fill_hex_array(binary, hexadecimal, 1, 8);
-			ibuf = handl_buf(buf, hexadecimal[6], ibuf);
-			ibuf = handl_buf(buf, hexadecimal[7], ibuf);
+			ibuf = hand1_buf(buf, hexadecimal[6], ibuf);
+			ibuf = hand1_buf(buf, hexadecimal[7], ibuf);
 			sum += 3;
 		}
 		else
-			ibuf = handl_buf(buf, str[i], ibuf);
+			ibuf = hand1_buf(buf, str[i], ibuf);
 	}
 	free(binary);
 	free(hexadecimal);
