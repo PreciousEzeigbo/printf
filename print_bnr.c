@@ -25,7 +25,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 32);
-	first_oe = 0;
+	first_one = 0;
 	for (count = i = 0; binary[i]; i++)
 	{
 		if (first_one == 0 && binary[i] == '1')

@@ -1,4 +1,4 @@
-#inclusde "main.h"
+#include "main.h"
 /**
  * printing_hex - prints a long decimal in hexadecimal
  * @arguments: input string
@@ -23,8 +23,9 @@ int printing_hex(va_list arguments, char *buf, unsigned int ibuf)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	binary = malloc(sizeof(chr) * (64 + 1));
+	binary = malloc(sizeof(char) * (64 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 64);
+	hexadecimal = malloc(sizeof(char) *(16 + 1));
 	hexadecimal = fill_hex_array(binary, hexadecimal, 0, 16);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
